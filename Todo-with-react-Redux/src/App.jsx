@@ -1,18 +1,14 @@
-import { useState } from 'react'
-
-import './App.css'
+import {store} from './store/store';
+import {Provider} from 'react-redux';
+import Card from './components/Card';
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <div>
-        <h1 className='bg-blue-700 p-1 text-xl text-white'>Zaman</h1>
-      </div>
-      
-    </>
+    <Provider store={store}>
+      <Card/>
+    </Provider>
   )
 }
 
 export default App
+
