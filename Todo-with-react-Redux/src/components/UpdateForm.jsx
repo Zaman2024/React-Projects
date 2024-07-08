@@ -1,18 +1,24 @@
 import React, {useState} from 'react'
-import { useDispatch } from 'react-redux'
+import { todoUpdated } from '../feature/TodoSlice';
+import {useSelector, useDispatch } from 'react-redux'
 
 function UpdateForm() {
-    const [update, setUpdate] = useState('');
+    const todoToUpdate = useSelector((state) => state.updateTodo)
+    const [update, setUpdate] = useState(todoToUpdate.text);
     const dispatch = useDispatch();
 
-    const handleSubmit =(e)=> {
+    const handleSubmit =(e) => {
         e.preventDefault();
 
         if(/^\s*$/.test(update)){
-            dispatch()
+            alert('Enter new Text')
+            setUpdate('')
 
         }else{
-
+            dispatch(todoUpdated({
+                id:todoToUpdate.id,
+                text:update
+            }))
         }
 
     }
@@ -30,6 +36,7 @@ function UpdateForm() {
             />
 
             <button
+                type='submit'
                 className='bg-red-700 text-white px-2 text-lg font-semibold rounded-e-lg'
             >
                 Update

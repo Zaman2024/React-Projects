@@ -37,7 +37,9 @@ export const TodoSlice = createSlice ({
     },
 
     todoUpdated : (state, action) =>{
-      state.todos = state.todos.map((todo) => todo.id === action.payload.id)
+      const todoModified = state.todos.find((todo) => todo.id === action.payload.id)
+      todoModified.text = action.payload.text
+      state.toggleForm = !state.toggleForm    
     }
 
   },
