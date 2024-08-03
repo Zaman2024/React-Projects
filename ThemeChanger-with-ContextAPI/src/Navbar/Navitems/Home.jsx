@@ -18,7 +18,6 @@ function Home() {
         <div 
           className='w-full rounded-lg p-6'
         >
-          
             <img src={`${image}`}
                  alt='Image'
                  className='rounded-lg border-2 border-black'
