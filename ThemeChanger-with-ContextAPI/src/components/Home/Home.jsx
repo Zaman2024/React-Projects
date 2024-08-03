@@ -13,11 +13,16 @@ function Home() {
 
   return (
     <>
-    <div className='flex flex-col justify-center items-center m-auto border w-1/3 rounded-lg'>
+    <div className='flex flex-col justify-center items-center m-auto border-2 border-black w-1/3 rounded-lg'>
+    <h2 className='text-center m-auto pt-6 text-lg font-semibold italic'>This is my Card</h2>
         <div 
-          className=''
+          className='w-full rounded-lg p-6'
         >
-            <img src={`${image}`} alt='Image'/> 
+          
+            <img src={`${image}`}
+                 alt='Image'
+                 className='rounded-lg border-2 border-black'
+                 /> 
         </div>
         <div>
             <h1>I am a passionate Web Developer</h1>
