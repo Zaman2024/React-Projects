@@ -3,6 +3,8 @@ import { createBrowserRouter, Router,Route, BrowserRouter, RouterProvider, } fro
 import Layout from './Layout/Layout'
 import {Home, About,Contact,Github} from './Navbar/Navitems/index'
 import { ThemeProvider } from './ComtextAPI/ThemeContext'
+import Card from './components/Card'
+import ThemeBtn from './components/ThemeBtn'
 
 
 
@@ -51,7 +53,13 @@ function App() {
   return (
     <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
         {/* <RouterProvider router={router}/> */}
-        <Home/>
+        <div>
+          <ThemeBtn/>
+        </div>
+        <div>
+          <Card/>
+        </div>
+        
     </ThemeProvider>
   )
 }
