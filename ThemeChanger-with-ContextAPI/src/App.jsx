@@ -3,55 +3,56 @@ import { createBrowserRouter, Router,Route, BrowserRouter, RouterProvider, } fro
 import Layout from './Layout/Layout'
 import {Home, About,Contact,Github} from './Navbar/Navitems/index'
 import { ThemeProvider } from './ComtextAPI/ThemeContext'
-// import { Home } from './Navbar/Navitems'
 
-const router = createBrowserRouter([
-  {
-    path:'/',
-    element: <Layout/>,
-    children:[
-      {
-        index:'Home',
-        element:<Home/>
-      },
-      {
-        path:'About',
-        element:<About/>
-      },
-      {
-        path:'Github',
-        element:<Github/>
-      },
-      {
-        path:'Contact',
-        element:<Contact/>
-      }
-    ]
-  }
-])
+
 
 function App() {
   const [themeMode, setThemeMode] = useState('light')
 
-
-  const darkMode = () => {
+  const darkTheme = () => {
     setThemeMode('dark')
-  }
+  };
 
-  const lightMode =() =>{
+  const lightTheme =() =>{
     setThemeMode('light')
-  }
+  };
 
   useEffect(()=>{
     document.querySelector('html').classList.remove('light', 'dark')
     document.querySelector('html').classList.add(themeMode)
 
-  },[themeMode])
+  },[themeMode]);
+
+  // const router = createBrowserRouter([
+  //   {
+  //     path:'/',
+  //     element: <Layout/>,
+  //     children:[
+  //       {
+  //         index:'Home',
+  //         element:<Home/>
+  //       },
+  //       {
+  //         path:'About',
+  //         element:<About/>
+  //       },
+  //       {
+  //         path:'Github',
+  //         element:<Github/>
+  //       },
+  //       {
+  //         path:'Contact',
+  //         element:<Contact/>
+  //       }
+  //     ]
+  //   }
+  // ])
 
   return (
-    <ThemeProvider value={{themeMode, darkMode, lightMode}}>
-        <RouterProvider router={router}/>
-    </ ThemeProvider>
+    <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
+        {/* <RouterProvider router={router}/> */}
+        <Home/>
+    </ThemeProvider>
   )
 }
 

@@ -13,7 +13,7 @@ function Card() {
 
   return (
     <>
-    <div className='flex flex-col justify-center items-center m-auto border-2 border-black w-1/3 rounded-lg'>
+    <div className='flex flex-col justify-center items-center m-auto border-2 dark:bg-slate-500 border-black w-1/3 dark:border-red-700 dark:border-5 rounded-lg'>
     <h2 className='text-center m-auto pt-6 text-lg font-semibold italic'>This is my Card</h2>
         <div 
           className='w-full rounded-lg p-6'

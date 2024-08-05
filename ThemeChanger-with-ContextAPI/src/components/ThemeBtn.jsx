@@ -2,19 +2,19 @@ import React from 'react'
 import useTheme from '../ComtextAPI/ThemeContext'
 
 function ThemeBtn() {
-    const {themeMode, darkMode, lightMode}= useTheme()
+    const {themeMode, darkMode, lightMode}= useTheme();
 
     const onBtnChange = (e) =>{
         const darkModeStatus = e.currentTarget.checked;
         if(darkModeStatus){
-            darkMode()
+          darkMode()
         }else{
-            lightMode()
+          lightMode()
         }
-    }
+    };
 
   return (
-    <label>
+    <label className='cursor-pointer'>
         <input 
             type="checkbox"
             value={'light'}
