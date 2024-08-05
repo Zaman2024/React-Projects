@@ -14,7 +14,7 @@ function Navbar() {
         />
       </div>
       <div className="flex text-lg gap-12 font-semibold py-2">
-        <div className="justify-center items-center">
+        <div className="mt-1">
           <ThemeBtn/>
         </div>
         <ul className="flex text-lg gap-12 font-semibold">
