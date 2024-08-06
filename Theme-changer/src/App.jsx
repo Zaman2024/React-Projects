@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 import { ThemeProvider } from './ContextAPI/ThemeContext'
 import Card from './components/Card'
+import ThemeBtn from './components/ThemeBtn'
 
 function App() {
   const [themeMode, setThemeMode] = useState('light')
@@ -22,7 +23,7 @@ function App() {
   return (
     <ThemeProvider value={ {themeMode, lightTheme, darkTheme}}>
       <div>
-        {/* <ThemeBtn/> */}
+        <ThemeBtn/>
       </div>
       <div>
         <Card/>
