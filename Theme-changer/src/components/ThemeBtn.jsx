@@ -1,7 +1,7 @@
 import React from 'react'
 import useTheme from '../ContextAPI/ThemeContext'
 
-function ThemeBtn() {
+export default function ThemeBtn() {
     const {themeMode, lightTheme, darkTheme} = useTheme();
 
     const onThemeChange = (e) => {
@@ -30,4 +30,4 @@ function ThemeBtn() {
   );
 }
 
-export default ThemeBtn
+// export default ThemeBtn
