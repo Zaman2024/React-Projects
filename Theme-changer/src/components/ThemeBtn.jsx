@@ -9,11 +9,11 @@ export default function ThemeBtn() {
         if(darkThemeStatus) {
             darkTheme()
         }else {
-           
-            
             lightTheme()
         }
     }
+
+
 
   return (
     <label className="relative inline-flex items-center cursor-pointer">
@@ -30,4 +30,4 @@ export default function ThemeBtn() {
   );
 }
 
-// export default ThemeBtn
+
