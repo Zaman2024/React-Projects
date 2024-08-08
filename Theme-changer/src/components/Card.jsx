@@ -13,7 +13,7 @@ useEffect( () => {
 })
 
   return (
-    <div className='flex flex-col justify-center items-center bg-white m-auto border-2 border-black w-1/3 p-5 rounded-lg dark:bg-slate-600 text-black dark:text-white'>
+    <div className='flex flex-col justify-center items-center bg-white m-auto border-2 border-black w-1/3 p-5 rounded-lg dark:bg-slate-800 text-black dark:text-white'>
         <div>
             <img src={image} alt='Image'
             className='border-2 border-black rounded-lg'
