@@ -4,7 +4,7 @@ import ThemeBtn from "../components/ThemeBtn";
 
 function Navbar() {
   return (
-    <div className="flex justify-between items-center bg-blue-700 text-white mb-8 px-4">
+    <div className="flex justify-between items-center bg-blue-700 dark:bg-slate-800 text-white px-4">
       <div className="rounded-full">
         <img
           src={"/public/Logo.jpg"}
@@ -14,9 +14,9 @@ function Navbar() {
         />
       </div>
       <div className="flex text-lg gap-12 font-semibold py-2">
-        {/* <div className="mt-1">
+        <div className="mt-1">
           <ThemeBtn/>
-        </div> */}
+        </div>
         <ul className="flex text-lg gap-12 font-semibold">
           <li>
             <NavLink to="/">Home</NavLink>

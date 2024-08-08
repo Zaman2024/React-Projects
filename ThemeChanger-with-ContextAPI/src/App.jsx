@@ -3,8 +3,7 @@ import { createBrowserRouter, Router,Route, BrowserRouter, RouterProvider, } fro
 import Layout from './Layout/Layout'
 import {Home, About,Contact,Github} from './Navbar/Navitems/index'
 import { ThemeProvider } from './ComtextAPI/ThemeContext'
-import Card from './components/Card'
-import ThemeBtn from './components/ThemeBtn'
+
 
 
 
@@ -22,44 +21,36 @@ function App() {
   useEffect(()=>{
     document.querySelector('html').classList.remove('light', 'dark')
     document.querySelector('html').classList.add(themeMode)
-
   },[themeMode]);
 
-  // const router = createBrowserRouter([
-  //   {
-  //     path:'/',
-  //     element: <Layout/>,
-  //     children:[
-  //       {
-  //         index:'Home',
-  //         element:<Home/>
-  //       },
-  //       {
-  //         path:'About',
-  //         element:<About/>
-  //       },
-  //       {
-  //         path:'Github',
-  //         element:<Github/>
-  //       },
-  //       {
-  //         path:'Contact',
-  //         element:<Contact/>
-  //       }
-  //     ]
-  //   }
-  // ])
+  const router = createBrowserRouter([
+    {
+      path:'/',
+      element: <Layout/>,
+      children:[
+        {
+          index:'Home',
+          element:<Home/>
+        },
+        {
+          path:'About',
+          element:<About/>
+        },
+        {
+          path:'Github',
+          element:<Github/>
+        },
+        {
+          path:'Contact',
+          element:<Contact/>
+        }
+      ]
+    }
+  ])
 
   return (
-    <ThemeProvider value={{themeMode, lightTheme, darkTheme}}>
-        {/* <RouterProvider router={router}/> */}
-        <div>
-          <ThemeBtn/>
-        </div>
-        <div>
-          <Card/>
-        </div>
-        
+    <ThemeProvider value={ {themeMode, lightTheme, darkTheme} }>
+        <RouterProvider router={router}/>  
     </ThemeProvider>
   )
 }
