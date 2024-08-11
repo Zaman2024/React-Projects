@@ -12,16 +12,28 @@ function Card() {
     //   .catch(() => {
     //     alert('Error occured when fetching Images');
     //   })
+//------------- Fetching data by using async/await Method-1 -------
+    // (async () => {
+    //   try {
+    //     const response = await fetch("https://api.github.com/users/Zaman2024")
+    //     const data =await response.json()
+    //     setImage(data.avatar_url);
+    //   } catch (err) {
+    //     alert('Error occured when fetching image');
+    //   }
+    // })();
 
-    (async () => {
+    (async function fetchData() {
       try {
-        const response = await fetch("https://api.github.com/users/Zaman2024")
-        const data =await response.json()
-        setImage(data.avatar_url);
-      } catch (err) {
-        alert('Error occured when fetching image');
+        const response = await fetch('https://api.github.com/users/Zaman2024')
+        const data = await response.json()
+        
+      } catch (error) {
+        console.error('Error:', error)
       }
-    })();
+    })
+    
+    
 
   }, []);
 
