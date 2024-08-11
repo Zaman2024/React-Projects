@@ -2,8 +2,8 @@ import React from 'react'
 
 function About() {
   return (
-    <div>
-      
+    <div className='w-full h-screen dark:bg-slate-900 dark:text-white'>
+      <h1>Zaman</h1>
     </div>
   )
 }
