@@ -15,14 +15,14 @@ function Card() {
 
     (async () => {
       try {
-        const image = await avatar_url("https://api.github.com/users/Zaman2024");
-        setBooks(image);
+        const response = await fetch("https://api.github.com/users/Zaman2024")
+        const data =await response.json()
+        setImage(data.avatar_url);
       } catch (err) {
-        console.log('Error occured when fetching image');
+        alert('Error occured when fetching image');
       }
     })();
 
-    
   }, []);
 
   return (
