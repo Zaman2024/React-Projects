@@ -4,11 +4,25 @@ function Card() {
   const [image, setImage] = useState("");
 
   useEffect(() => {
-    fetch("https://api.github.com/users/Zaman2024")
-      .then((response) => response.json())
-      .then((json) => {
-        setImage(json.avatar_url);
-      });
+    // fetch("https://api.github.com/users/Zaman2024")
+    //   .then((response) => response.json())
+    //   .then((json) => {
+    //     setImage(json.avatar_url);
+    //   })
+    //   .catch(() => {
+    //     alert('Error occured when fetching Images');
+    //   })
+
+    (async () => {
+      try {
+        const image = await avatar_url("https://api.github.com/users/Zaman2024");
+        setBooks(image);
+      } catch (err) {
+        console.log('Error occured when fetching image');
+      }
+    })();
+
+    
   }, []);
 
   return (
