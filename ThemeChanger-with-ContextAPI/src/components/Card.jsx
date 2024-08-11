@@ -22,18 +22,19 @@ function Card() {
     //     alert('Error occured when fetching image');
     //   }
     // })();
-
-    (async function fetchData() {
+//------------Fetching Method 2 ----------------
+    async function fetchData() {
       try {
         const response = await fetch('https://api.github.com/users/Zaman2024')
         const data = await response.json()
-        
+        setImage(data.avatar_url)
+        console.log(data.id)
       } catch (error) {
-        console.error('Error:', error)
+        alert('Error')
       }
-    })
+    }
     
-    
+   fetchData() 
 
   }, []);
 
