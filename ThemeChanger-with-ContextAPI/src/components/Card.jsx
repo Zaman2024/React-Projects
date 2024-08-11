@@ -13,28 +13,28 @@ function Card() {
     //     alert('Error occured when fetching Images');
     //   })
 //------------- Fetching data by using async/await Method-1 -------
-    // (async () => {
-    //   try {
-    //     const response = await fetch("https://api.github.com/users/Zaman2024")
-    //     const data =await response.json()
-    //     setImage(data.avatar_url);
-    //   } catch (err) {
-    //     alert('Error occured when fetching image');
-    //   }
-    // })();
-//------------Fetching Method 2 ----------------
-    async function fetchData() {
+    (async () => {
       try {
-        const response = await fetch('https://api.github.com/users/Zaman2024')
-        const data = await response.json()
-        setImage(data.avatar_url)
-        console.log(data.id)
-      } catch (error) {
-        alert('Error')
+        const response = await fetch("https://api.github.com/users/Zaman2024")
+        const data =await response.json()
+        setImage(data.avatar_url);
+      } catch (err) {
+        alert('Error occured when fetching image');
       }
-    }
+    })();
+//------------Fetching Method 2 ----------------
+  //   async function fetchData() {
+  //     try {
+  //       const response = await fetch('https://api.github.com/users/Zaman2024')
+  //       const data = await response.json()
+  //       setImage(data.avatar_url)
+  //       console.log(data.id)
+  //     } catch (error) {
+  //       alert('Error')
+  //     }
+  //   }
     
-   fetchData() 
+  //  fetchData() 
 
   }, []);
 
