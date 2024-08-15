@@ -13,17 +13,29 @@ function Loging() {
   return (
     <div className="flex flex-col justify-center items-center m-auto w-full h-screen bg-slate-900 text-white">
       <h1>Authentication</h1>
+      <div className="flex gap-2 mt-5">
       <div className="flex gap-2">
+        <h1>Loging : </h1>
+        <input
+            type="text"
+            value={userName}
+            onChange={(e) => setUsername(e.target.value)}
+            placeholder="Username"
+            className="px-2 rounded-md"
+        />
+      </div>
       <div>
         <input
             type="text"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            placeholder="Password"
+            className="px-2 rounded-md"
         />
+        </div>
       </div>
       <div>
-      <input
-            type="text"
-        />
-      </div>
+        <button onClick={handleSubmit}>Submit</button>
       </div>
     </div>
   );
