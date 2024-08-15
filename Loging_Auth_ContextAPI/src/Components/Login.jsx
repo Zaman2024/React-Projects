@@ -1,15 +1,18 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../Context/UserContext";
 
-function Loging() {
+function Login() {
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const { setUser } = useContext(UserContext);
 
-  const handleSubmit = (e) => {
+  const handleSubmit = e => {
     e.preventDefault();
+
     setUser({ userName, password });
+
   };
+
   return (
     <div className="flex flex-col justify-center items-center m-auto w-full h-screen bg-slate-900 text-white">
       <h1>Authentication</h1>
@@ -19,7 +22,7 @@ function Loging() {
         <input
             type="text"
             value={userName}
-            onChange={(e) => setUsername(e.target.value)}
+            onChange={e => setUsername(e.target.value)}
             placeholder="Username"
             className="px-2 rounded-md text-black"
         />
@@ -28,7 +31,7 @@ function Loging() {
         <input
             type="text"
             value={password}
-            onChange={(e) => setPassword(e.target.value)}
+            onChange={e => setPassword(e.target.value)}
             placeholder="Password"
             className="px-2 rounded-md text-black"
         />
@@ -41,9 +44,10 @@ function Loging() {
         >
             Submit
         </button>
+        
       </div>
     </div>
   );
 }
 
-export default Loging;
+export default Login;

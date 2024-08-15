@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import Loging from './Components/Loging'
+import Login from './Components/Login'
 import UserContextProvider from './Context/UserContextProvider'
 
 
@@ -8,7 +8,7 @@ function App() {
 
   return (
     <UserContextProvider>
-      <Loging/>
+      <Login/>
     </UserContextProvider>
   )
 }
