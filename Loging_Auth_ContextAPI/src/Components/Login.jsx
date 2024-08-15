@@ -11,6 +11,8 @@ function Login() {
 
     setUser({ userName, password });
 
+    console.log('Btn Clicked')
+
   };
 
   return (
@@ -40,7 +42,7 @@ function Login() {
       <div>
         <button 
             onClick={handleSubmit}
-            className="bg-green-700 rounded-lg px-2 mt-5 border-2 border-black"
+            className="bg-green-700 rounded-lg px-2 mt-5 border-2 border-black "
         >
             Submit
         </button>
