@@ -21,7 +21,7 @@ function Loging() {
             value={userName}
             onChange={(e) => setUsername(e.target.value)}
             placeholder="Username"
-            className="px-2 rounded-md"
+            className="px-2 rounded-md text-black"
         />
       </div>
       <div>
@@ -30,12 +30,17 @@ function Loging() {
             value={password}
             onChange={(e) => setPassword(e.target.value)}
             placeholder="Password"
-            className="px-2 rounded-md"
+            className="px-2 rounded-md text-black"
         />
         </div>
       </div>
       <div>
-        <button onClick={handleSubmit}>Submit</button>
+        <button 
+            onClick={handleSubmit}
+            className="bg-green-700 rounded-lg px-2 mt-5 border-2 border-black"
+        >
+            Submit
+        </button>
       </div>
     </div>
   );
