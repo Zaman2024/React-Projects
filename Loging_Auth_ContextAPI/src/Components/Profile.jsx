@@ -7,7 +7,7 @@ function Profile() {
   if(!user) return <div>Please Login</div>
 
   return <div> Welcome {user.username}</div>
-  
+
   
 }
 
