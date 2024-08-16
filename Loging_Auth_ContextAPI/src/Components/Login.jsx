@@ -1,17 +1,16 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../Context/UserContext";
 
-function Login() {
-  const [userName, setUsername] = useState("");
+const Login = () => {
+  const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  
   const { setUser } = useContext(UserContext);
 
-  const handleSubmit = e => {
-    e.preventDefault();
+  const handleSubmit = (e) => {
+    e.preventDefault()
 
-    setUser({ userName, password });
-
-    console.log('Btn Clicked')
+    setUser ({ username, password });
 
   };
 
@@ -23,7 +22,7 @@ function Login() {
         <h1>Loging : </h1>
         <input
             type="text"
-            value={userName}
+            value={username}
             onChange={e => setUsername(e.target.value)}
             placeholder="Username"
             className="px-2 rounded-md text-black"
@@ -33,7 +32,7 @@ function Login() {
         <input
             type="text"
             value={password}
-            onChange={e => setPassword(e.target.value)}
+            onChange={e => setPassword (e.target.value)}
             placeholder="Password"
             className="px-2 rounded-md text-black"
         />
