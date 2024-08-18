@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import UserContext from "../Context/UserContext";
 
+
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -19,7 +20,7 @@ const Login = () => {
       <h1>Authentication</h1>
       <div className="flex gap-2 mt-5">
       <div className="flex gap-2">
-        <h1>Loging : </h1>
+        <h1>Login : </h1>
         <input
             type="text"
             value={username}
