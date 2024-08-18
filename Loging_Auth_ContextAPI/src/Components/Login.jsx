@@ -1,3 +1,4 @@
+
 import React, { useContext, useState } from "react";
 import UserContext from "../Context/UserContext";
 
@@ -8,15 +9,15 @@ const Login = () => {
   
   const { setUser } = useContext(UserContext);
 
-  const handleSubmit = (e) => {
-    e.preventDefault()
+  const handleSubmit = e => {
+    e.preventDefault();
 
     setUser ({ username, password });
 
   };
 
   return (
-    <div className="flex flex-col justify-center items-center m-auto w-full h-screen bg-slate-900 text-white">
+    <div className="flex flex-col justify-center items-center m-auto  bg-slate-900 text-white">
       <h1>Authentication</h1>
       <div className="flex gap-2 mt-5">
       <div className="flex gap-2">
@@ -51,5 +52,6 @@ const Login = () => {
     </div>
   );
 }
-
 export default Login;
+
+
