@@ -22,9 +22,9 @@ function App() {
   return (
     <ThemeProvider value={ {themeMode, lightTheme, darkTheme}}>
       <div>
+      <div>
         <ThemeBtn/>
       </div>
-      <div>
         <Card/>
       </div>
 
