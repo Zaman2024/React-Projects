@@ -11,7 +11,6 @@
   },
   "dependencies": {
     "autoprefixer": "^10.4.20",
-    "init": "^0.1.2",
     "postcss": "^8.4.41",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
