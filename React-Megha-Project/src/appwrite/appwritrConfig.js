@@ -76,6 +76,21 @@ async getPost( slug){
         console.log("Appwrite service :: getPost:: error",error)
     }
 }
+async getPosts(queries =[Query.equal("status", "active")]){
+    try {
+
+        await this.databases.listDocuments(
+            config.AppwriteDatabaseId,
+            config.AppwriteCollectionId,
+            queries,
+        )
+        
+    } catch (error) {
+        console.log("Appwrite service :: getPosts::error",error);
+        return false
+    }
+}
+
 }
 
 const appwriteService = new Service()
