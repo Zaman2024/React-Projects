@@ -89,7 +89,8 @@ async getPosts(queries =[Query.equal("status", "active")]){
         return false
     }
 }
-
+    //---- File upload Service-----
+    
     //--- File Create and Uploading to the storage---
 async uploadFile (file) {
     try {
