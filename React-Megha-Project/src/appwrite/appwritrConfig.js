@@ -76,15 +76,42 @@ async getPost( slug){
         console.log("Appwrite service :: getPost:: error",error)
     }
 }
+    //--- Get an additional post ----
 async getPosts(queries =[Query.equal("status", "active")]){
     try {
-
-        await this.databases.listDocuments(
+       return await this.databases.listDocuments(
             config.AppwriteDatabaseId,
             config.AppwriteCollectionId,
             queries,
+        )  
+    } catch (error) {
+        console.log("Appwrite service :: getPosts::error",error);
+        return false
+    }
+}
+
+    //--- File Create and Uploading to the storage---
+async uploadFile (file) {
+    try {
+        return await this.bucket.createFile(
+            config.AppwriteBucketId,
+            ID.unique(),
+            file
         )
-        
+    } catch (error) {
+        console.log("Appwrite service :: getPosts::error",error);
+        return false 
+    }
+}
+    //--- Delete File from the storage ----
+async deleteFile (fileId) {
+    try {
+        await this.bucket.deleteFile(
+            config.AppwriteBucketId,
+            fileId
+        )
+        return true
+
     } catch (error) {
         console.log("Appwrite service :: getPosts::error",error);
         return false
