@@ -117,6 +117,13 @@ async deleteFile (fileId) {
         return false
     }
 }
+    //--- Post Preview ---
+getFilePreview () {
+    return this.bucket.getFilePreview(
+        config.AppwriteBucketId,
+        fileId
+    )
+}
 
 }
 
