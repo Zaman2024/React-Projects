@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import { useDispatch } from 'react-redux'
 import authService from './appwrite/auth'
 import { login, logout } from './Store/AuthSlice' 
+import { Header, Footer } from './components'
 
 
 import './App.css'
@@ -30,10 +31,14 @@ function App() {
 
 
   return !loading ? (
-    <div className='bg-red-500'>
-      Zaman
+    <div className='bg-slate-300'>
+      <Header />
+      <main>
+        //Todo : <Outlet />
+      </main>
+      <Footer />
     </div>
-  ) :(null)
+  ) : null
 }
 
 export default App
