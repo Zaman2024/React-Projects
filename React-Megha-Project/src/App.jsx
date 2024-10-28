@@ -30,7 +30,7 @@ function App() {
 
 
   return !loading ? (
-    <div className=''>
+    <div className='bg-red-500'>
       Zaman
     </div>
   ) :(null)
