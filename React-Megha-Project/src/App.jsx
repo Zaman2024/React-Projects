@@ -31,10 +31,10 @@ function App() {
 
 
   return !loading ? (
-    <div className='bg-slate-300'>
+    <div className='min-h-screen bg-slate-400'>
       <Header />
       <main>
-        //Todo : <Outlet />
+        //Todo : {/* <Outlet /> */}
       </main>
       <Footer />
     </div>
